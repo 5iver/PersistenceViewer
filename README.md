@@ -4,7 +4,7 @@ Setup:
 2) By default, all items will be displayed. To select a group item that holds the items you are persisting, edit index.html and set startItem to the name of the item on line 148.
 3) By default, items will be sorted alphabetically. To disable this, edit index.html and set shouldSort to false on line 149.
 4) By default, the default persistence service is used. To set a specific persistence service, edit index.html and set persistenceService on line 150.
-5) View your persistence data in a browser at http://[openhab server]:8080/static/history.
+5) View your persistence data in a browser at http://[openhab server]:8080/static/PersistenceViewer.
 
 Usage:
 1) By default, one month of persistence data will be retrieved, unless specific dates are entered in the Start and End date fields.
