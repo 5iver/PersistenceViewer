@@ -36,7 +36,7 @@
             }
             #breadcrumbsUL li+li:before {
                 color: rgb(115, 100, 125);
-                content: "\00a0>\00a0";
+                content: ">\00a0";
             }
             #breadcrumbsUL li a {
                 color: rgb(155, 155, 155);
@@ -147,10 +147,10 @@
             /////// USER DATA ///////
             var startItem = "";// must be a group or ""
             var shouldSort = true;// if true, items will be sorted alphabetically
-            var persistenceService = "";// to use something other than the default, enter a persistence service
 
             /////// NO NEED TO MODIFY BELOW HERE ///////
             var ohURL = window.location.origin;
+            var persistenceService = window.location.search.substring(1) || "";
             $( "#history_canvas" ).ready($(function() {
                 //console.log("start");
                 createFirstBreadcrumb(startItem);
@@ -167,9 +167,6 @@
                 }
                 else {
                     urlString = urlString + "/" + item;
-                };
-                if (persistenceService != "") {
-                    urlString = urlString + "?persistenceId=" + persistenceService;
                 };
                 //console.log("getItems: urlString=" + urlString);
                 $.ajax({
@@ -256,10 +253,6 @@
                 else {
                     //console.log("displayHistory: item=" + item);
                     urlString = ohURL + "/rest/persistence/items/" + item;
-                    //console.log("displayHistory: document.getElementById('start_dt').value=" + document.getElementById('start_dt').value);
-                    //console.log("displayHistory: document.getElementById('start_tm').value=" + document.getElementById('start_tm').value);
-                    //console.log("displayHistory: document.getElementById('end_dt').value=" + document.getElementById('end_dt').value);
-                    //console.log("displayHistory: document.getElementById('end_tm').value=" + document.getElementById('end_tm').value);
                     if (document.getElementById('start_dt').value == "") {
                         var tempDate = new Date(new Date().setMonth(new Date().getMonth() - 1));
                         document.getElementById('start_dt').value = tempDate.toISOString().split("T")[0];
@@ -275,6 +268,9 @@
                         document.getElementById('end_tm').value = "00:00"
                     };
                     urlString = urlString + "?starttime=" + document.getElementById('start_dt').value + "T" + document.getElementById('start_tm').value + "&endtime=" + document.getElementById('end_dt').value + "T" + document.getElementById('end_tm').value;
+                    if (persistenceService != "") {
+                        urlString = urlString + "&persistenceId=" + persistenceService;
+                    };
                     console.log("displayHistory: urlString=" + urlString);
                     $.ajax({
                         url     : urlString,
