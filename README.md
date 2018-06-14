@@ -1,6 +1,4 @@
 # PersistenceViewer
-HTML/jQuery/AJAX page for tabular viewing of openHAB persistence data
-
 Setup:
 1) Copy the PersistenceViewer folder to openHAB {%openhab%}/conf/html.
 2) By default, all items will be displayed. To select a group item that holds the items you are persisting, edit index.html and set startItem to the name of the item on line 148.
