@@ -243,6 +243,7 @@
                     item = document.getElementById('breadcrumbsUL').lastElementChild.lastElementChild.innerHTML;
                 };
                 var tableBody = document.getElementById('HistoryBody')
+                tableBody.innerHTML = '';
                 if (item == "") {
                     var row = document.createElement('TR');
                     var time = document.createElement('TD');
@@ -255,7 +256,6 @@
                 }
                 else {
                     //console.log("displayHistory: item=" + item);
-                    document.getElementById('HistoryBody').innerHTML = '';
                     urlString = ohURL + "/rest/persistence/items/" + item;
                     //console.log("displayHistory: document.getElementById('start_dt').value=" + document.getElementById('start_dt').value);
                     //console.log("displayHistory: document.getElementById('start_tm').value=" + document.getElementById('start_tm').value);
