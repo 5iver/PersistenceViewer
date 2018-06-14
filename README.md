@@ -1,5 +1,5 @@
 # PersistenceViewer
-HTML/jQuery/AJAX page for viewing openHAB persistence data
+HTML/jQuery/AJAX page for tabular viewing of openHAB persistence data
 
 Setup:
 1) Copy the PersistenceViewer folder to openHAB {%openhab%}/conf/html.
@@ -14,3 +14,5 @@ Usage:
 3) When a group is selected, it's persistence data will be displayed, along with all of the items in the group. If no data is available, N/A will be displayed.
 4) Use the breadcrumbs to navigate backwards.
 5) PersistenceViewer can be displayed in HABpanel by adding it into a Frame widget, but this may not work well for lower resolution screens or if the widget is too small.
+
+Please comment in the OH community forum... https://community.openhab.org/t/persistenceviewer/46407
