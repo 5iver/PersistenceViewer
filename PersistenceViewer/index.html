@@ -163,10 +163,10 @@
                 //console.log("getItems: " + item);
                 var urlString = ohURL + "/rest/items";
                 if (item == "") {
-                    urlString = urlString + "?recursive=false"
+                    urlString = urlString + "?recursive=false";
                 }
                 else {
-                    urlString = urlString + "/" + item
+                    urlString = urlString + "/" + item;
                 };
                 if (persistenceService != "") {
                     urlString = urlString + "?persistenceId=" + persistenceService;
