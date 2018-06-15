@@ -269,7 +269,7 @@
                     };
                     urlString = urlString + "?starttime=" + document.getElementById('start_dt').value + "T" + document.getElementById('start_tm').value + "&endtime=" + document.getElementById('end_dt').value + "T" + document.getElementById('end_tm').value;
                     if (persistenceService != "") {
-                        urlString = urlString + "&persistenceId=" + persistenceService;
+                        urlString = urlString + "&serviceId=" + persistenceService;
                     };
                     console.log("displayHistory: urlString=" + urlString);
                     $.ajax({
