@@ -2,11 +2,11 @@
 Setup:
 1) Copy the PersistenceViewer directory to openHAB {%openhab%}/conf/html.
 2) View your persistence data in a browser at http://[openhab server]:8080/static/PersistenceViewer/.
-3) By default, all items will be displayed. To select a specific group item that holds the items you are persisting, add a querystring to the end of the URL (?startItem=gPersist).
-4) By default, items will be sorted alphabetically. To disable this, add a querystring to the end of the URL (?shouldSort=false).
-5) By default, the default persistence service configured in OH is used. To use a different one, add a querystring to the end of the URL (?serviceId=rrd4j).
+3) By default, the Items table will initially be populated with groups that have no parent group. This is good for when all your items are in groups. To initially display all items, dd a query string to the end of the URL (?startWithGroups=false). Alternatively, to initially display a specific group item that holds the items you are persisting, add a query string to the end of the URL (?startItem=gPersist).
+4) By default, items will be sorted alphabetically. To disable this, add a query string to the end of the URL (?shouldSort=false).
+5) By default, the default persistence service configured in OH is used. To use a different one, add a query string to the end of the URL (?serviceId=rrd4j).
 
-Querystrings need to be separated by an ampersand. The only part of the querystrings that is case sensitive is the name of the startItem. Here is an example using all of them (they can be put in any order)...
+Query strings need to be separated by an ampersand. The only part of the querystrings that is case sensitive is the value for startItem. Here is an example (they can be used in any order)...
 
 http://[openhab server]:8080/static/PersistenceViewer/?SeRvIcEiD=MaPdB&ShOuLdSoRt=FaLsE&StArTiTeM=gPersistence
 
