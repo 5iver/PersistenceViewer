@@ -148,11 +148,15 @@
             var ohURL = window.location.origin;
             var serviceId = getQueryVariable("serviceid").toLowerCase();
             var startItem = getQueryVariable("startitem");
+            var startWithGroups = true;
+            if (getQueryVariable("startwithgroups").toLowerCase() == "false") {
+                startWithGroups = false;
+            }
             var shouldSort = true;
             if (getQueryVariable("shouldsort").toLowerCase() == "false") {
                 shouldSort = false;
             }
-            console.log("getQueryVariable: serviceId=%s, startItem=%s, shouldSort=%s",serviceId,startItem,shouldSort);
+            console.log("getQueryVariable: serviceId=%s, startItem=%s, startWithGroups=%s, shouldSort=%s",serviceId,startItem,startWithGroups,shouldSort);
             document.getElementById("start_tm").defaultValue = "00:00";
             document.getElementById("end_tm").defaultValue = "00:00";
 
@@ -354,7 +358,7 @@
                     success : function(data) {
                         //console.log("getItems: data=#s",JSON.stringify(data));
                         //console.log("getItems: data: groups=%s",JSON.stringify(data).includes("members"));
-                        if (item === "") {
+                        if (item === "" && startWithGroups === true) {
                             //console.log("first load: data.length=%s",data.length);
                             var i;
                             for (i = data.length - 1; i >= 0; i-=1) {
