@@ -7,6 +7,7 @@ Setup:
 5) By default, the default persistence service configured in OH is used. To use a different one, add a querystring to the end of the URL (?serviceId=rrd4j).
 
 QueryStrings need to be separated by an ampersand, and the query part (startItem, shouldSort, serviceId) are case sensitive. The values for shouldSort and serviceId are not case sensitive. The Here is an example using all of them (they can be put in any order)...
+
 http://[openhab server]:8080/static/PersistenceViewer/?startItem=gPersistence&shouldSort=FaLsE&serviceId=MaPdB.
 
 Usage:
