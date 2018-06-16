@@ -3,7 +3,7 @@ Setup:
 1) Copy the PersistenceViewer folder to openHAB {%openhab%}/conf/html.
 2) By default, all items will be displayed. To select a group item that holds the items you are persisting, edit index.html and set startItem to the name of the item on line 148.
 3) By default, items will be sorted alphabetically. To disable this, edit index.html and set shouldSort to false on line 149.
-4) By default, the default persistence service configured in OH is used. To use a different one, add a querystring to the end of the URL (?jdbc, ?rrd4j, ?mysql, ?influx, etc.). It has been reported that MapDB is not currently working, but I'm looking into it.
+4) By default, the default persistence service configured in OH is used. To use a different one, add a querystring to the end of the URL (?jdbc, ?rrd4j, ?mysql, ?influx, ?mapdb, etc.).
 5) View your persistence data in a browser at http://[openhab server]:8080/static/PersistenceViewer/.
 
 Usage:
