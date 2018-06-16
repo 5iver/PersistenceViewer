@@ -6,9 +6,9 @@ Setup:
 4) By default, items will be sorted alphabetically. To disable this, add a querystring to the end of the URL (?shouldSort=false).
 5) By default, the default persistence service configured in OH is used. To use a different one, add a querystring to the end of the URL (?serviceId=rrd4j).
 
-Querystrings need to be separated by an ampersand, and the query part (startItem, shouldSort, serviceId) is case sensitive. The values for shouldSort and serviceId are not case sensitive. Here is an example using all of them (they can be put in any order)...
+Querystrings need to be separated by an ampersand. The only part of the querystrings that is case sensitive is the name of the startItem. Here is an example using all of them (they can be put in any order)...
 
-http://[openhab server]:8080/static/PersistenceViewer/?serviceId=MaPdB&shouldSort=FaLsE&startItem=gPersistence
+http://[openhab server]:8080/static/PersistenceViewer/?SeRvIcEiD=MaPdB&ShOuLdSoRt=FaLsE&StArTiTeM=gPersistence
 
 Usage:
 1) By default, one month of persistence data will be retrieved, unless specific dates are entered in the Start and End date fields.
