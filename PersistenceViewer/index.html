@@ -146,10 +146,10 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
         <script>
             var ohURL = window.location.origin;
-            var serviceId = getQueryVariable("serviceId").toLowerCase();
-            var startItem = getQueryVariable("startItem");
+            var serviceId = getQueryVariable("serviceid").toLowerCase();
+            var startItem = getQueryVariable("startitem");
             var shouldSort = true;
-            if (getQueryVariable("shouldSort").toLowerCase() == "false") {
+            if (getQueryVariable("shouldsort").toLowerCase() == "false") {
                 shouldSort = false;
             }
             console.log("getQueryVariable: serviceId=%s, startItem=%s, shouldSort=%s",serviceId,startItem,shouldSort);
@@ -199,7 +199,7 @@
                 var pair;
                 for (i = 0; i < vars.length; i+=1) {
                     pair = vars[i].split("=");
-                    if (decodeURIComponent(pair[0]) == variable) {
+                    if (decodeURIComponent(pair[0]).toLowerCase() == variable) {
                         return decodeURIComponent(pair[1]);
                     }
                 }
