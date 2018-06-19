@@ -3,7 +3,7 @@ Setup:
 1) Copy the PersistenceViewer directory to openHAB {%openhab%}/conf/html.
 2) View your persistence data in a browser at http://[openhab server]:8080/static/PersistenceViewer/.
 3) By default, the Items table will initially be populated with groups that have no parent group. This is good for when all your items are in groups. To initially display all items, add a query string to the end of the URL (?startWithGroups=false), but this will cause the page to load very slowly if you have a lot of items. Alternatively, to initially display a specific group item that holds the items you are persisting, add a query string to the end of the URL (?startItem=gPersist).
-4) By default, items will be sorted alphabetically. To disable this, add a query string to the end of the URL (?shouldSort=false).
+4) By default, items will be sorted alphabetically. To disable this, add a query string to the end of the URL (?shouldSort=false). Disabling the sort will also dramatically improve performance if you use startWithGroups=false or if your startItem is a group with a lot of items in it.
 5) By default, the default persistence service configured in OH is used. To use a different one, add a query string to the end of the URL (?serviceId=rrd4j).
 
 Query strings need to be separated by an ampersand. The only part of the querystrings that is case sensitive is the value for startItem. Here is an example (they can be used in any order)...
