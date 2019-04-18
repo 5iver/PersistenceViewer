@@ -8,7 +8,9 @@ Setup:
 
 Query strings need to be separated by an ampersand. The only part of the querystrings that is case sensitive is the value for startItem. Here is an example (they can be used in any order)...
 
+```
 http://[openhab server]:8080/static/PersistenceViewer/?SeRvIcEiD=MaPdB&ShOuLdSoRt=FaLsE&StArTiTeM=gPersistence
+```
 
 Usage:
 1) By default, one month of persistence data will be retrieved, unless specific dates are entered in the Start and End date fields.
