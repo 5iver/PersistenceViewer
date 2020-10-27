@@ -251,7 +251,7 @@
             }
 
             function displayHistory(item) {
-                if (item === null) {
+                if (typeof(item) === "undefined" || item === null) {
                     item = document.getElementById("breadcrumbsUL").lastElementChild.lastElementChild.innerHTML;
                 }
                 var tableBody = document.getElementById("HistoryBody");
